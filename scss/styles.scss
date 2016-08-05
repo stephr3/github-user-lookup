@@ -1,7 +1,11 @@
-$gray : #d3d3d3;
+$dark-blue: #13293d;
+$med-blue: #006494;
+$green-blue: #247ba0;
+$gray: #e8f1f2;
 
 body{
   background-color: $gray;
+  color: $med-blue;
 }
 
 div#error {
@@ -10,4 +14,34 @@ div#error {
 
 div#results {
   display: none;
+}
+
+.jumbotron {
+  background-color: $dark-blue;
+  h1 {
+    color: $gray;
+    text-align: center;
+  }
+}
+
+
+
+.btn {
+  font-size: 1.1em;
+  margin: 10px 5px;
+  min-width: 100px;
+}
+
+.form-wrapper {
+  display: block;
+  padding-left: 25%;
+  font-size: 1.3em;
+  input#username {
+    font-size: 1.2em;
+    max-width: 60%;
+  }
+  select#per-page {
+    font-size: 1.1em;
+    max-width: 20%;
+  }
 }

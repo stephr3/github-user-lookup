@@ -8,23 +8,27 @@
     <title>Github User Lookup</title>
   </head>
   <body>
-    <div class="container">
+    <header class="jumbotron">
       <h1>Github User Lookup</h1>
-      <form>
-        <div class="form-group">
-          <label for="username">Enter a Github Username:</label>
-          <input id="username" type="text">
-          <label for="per-page">How many results would you like to display?</label>
-          <select id="per-page">
-            <option>10</option>
-            <option>30</option>
-            <option>50</option>
-            <option>80</option>
-            <option>100</option>
-          </select>
-          <button type="submit" class="btn-primary" id="username-input">Search</button>
-        </div>
-      </form>
+    </header>
+    <div class="container">
+      <div class="form-wrapper">
+        <form class="form-inline">
+          <div class="form-group">
+            <label for="username">Github Username:</label>
+            <input id="username" type="text" class="form-control">
+            <label for="per-page">Repos:</label>
+            <select id="per-page" class="form-control">
+              <option>10</option>
+              <option>30</option>
+              <option>50</option>
+              <option>80</option>
+              <option>100</option>
+            </select>
+            <button type="submit" class="btn btn-primary" id="username-input">Search</button>
+          </div>
+        </form>
+      </div>
       <div id="results">
         <p>Username: <strong><span id="username-result"></span></strong></p>
         <h3>User Information:</h3>
