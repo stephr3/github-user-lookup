@@ -1,6 +1,7 @@
 var User = require('./../js/user.js').userModule;
 
 $(document).ready(function() {
+  $("#time").text(moment());
   $("#username-input").click(function(event){
     event.preventDefault();
     $("#repo-list").empty();
