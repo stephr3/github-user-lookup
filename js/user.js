@@ -22,9 +22,21 @@ User.prototype.getUserInformation = function(){
   $.get('https://api.github.com/users/' + self.username + '?access_token=' + apiKey).then(function(response){
     console.log(response);
     $("#user-image").attr("src", response.avatar_url);
-    $("#user-info-name").text(response.name);
-    $("#user-info-location").text(response.location);
-    $("#user-info-email").text(response.email);
+    if(response.name){
+      $("#user-info-name").text(response.name);
+    } else {
+      $("#user-info-name").text("No name given");
+    }
+    if(response.location){
+      $("#user-info-location").text(response.location);
+    } else {
+      $("#user-info-location").text("No location given");
+    }
+    if(response.email){
+      $("#user-info-email").text(response.email);
+    } else {
+      $("#user-info-email").text("No email given");
+    }
     $("#user-info-url").text(response.html_url);
     $("#user-info-followers").text(response.followers);
     $("#user-info-following").text(response.following);
