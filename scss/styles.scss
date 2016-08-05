@@ -57,3 +57,20 @@ div#results {
     max-width: 20%;
   }
 }
+
+img {
+  border: 2px solid $med-blue;
+  max-width: 20%;
+  margin: 0 20px;
+}
+
+li {
+  list-style: none;
+}
+
+div#title {
+  background-color: white;
+  border: 5px solid $med-blue;
+  border-radius: 5px;
+  min-height: 100px;
+}
