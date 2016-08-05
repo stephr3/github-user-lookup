@@ -4,8 +4,8 @@ $(document).ready(function() {
   $("#username-input").click(function(event){
     event.preventDefault();
     username = $("#username").val();
+    $("#username-result").text(username);
     newUserSearch = new User(username);
-    console.log(newUserSearch);
     newUserSearch.getRepos();
   });
 });
