@@ -10,7 +10,7 @@ User.prototype.getRepos = function(){
     console.log(response);
     $("#results").show();
     for(var i=0; i<response.length; i++){
-      $("#repo-list").append("<li><strong>" + response[i].name + "</strong>: " + response[i].description + "</li>");
+      $("#repo-list").append("<li><strong>" + response[i].name + "</strong>: " + response[i].description + " <em>Created " +moment(response[i].created_at).format("M/DD/YYYY")+ "</em></li>");
     };
   }).fail(function(error){
     console.log(error.responseJSON.message);
