@@ -31,7 +31,7 @@ Boot up the server in your browser of choice:
 ```
 $ gulp serve
 ```
-__Note:__ This project is depended on the Github API, which will only allow up to 60 server requests per hour. If you would like more server requests, you must create your own personal access token.
+__Note:__ This project is dependent on the Github API. To use this program, you must create your own personal access token.
 
 * Visit the settings section of your Github account. Select *Personal Access Tokens* from the sidebar. Click *Gnerate New Token*.
 
