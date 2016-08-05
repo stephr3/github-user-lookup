@@ -1,5 +1,13 @@
 $gray : #d3d3d3;
 
-html{
+body{
   background-color: $gray;
+}
+
+div#error {
+  display:none;
+}
+
+div#results {
+  display: none;
 }
