@@ -10,6 +10,7 @@ $(document).ready(function() {
     $("#username").val("");
     $("#username-result").text(username);
     newUserSearch = new User(username);
+    newUserSearch.getUserInformation();
     newUserSearch.getRepos();
   });
 });
