@@ -2,6 +2,7 @@ $dark-blue: #13293d;
 $med-blue: #006494;
 $green-blue: #247ba0;
 $gray: #e8f1f2;
+$salmon: #ff6666;
 
 body{
   background-color: $gray;
@@ -9,7 +10,18 @@ body{
 }
 
 div#error {
+  background-color: $salmon;
+  border: solid 1px $dark-blue;
+  border-radius: 5px;
+  color: $gray;
   display:none;
+  font-size: 1.1em;
+  margin-left: 25%;
+  margin-top: 10px;
+  max-width: 40%;
+  min-height: 30px;
+  padding: 12px 0 6px;
+  text-align: center;
 }
 
 div#results {
