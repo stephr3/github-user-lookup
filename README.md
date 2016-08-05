@@ -1,7 +1,7 @@
 # Github User Lookup
 ## *By Stephanie Gurung*
 
-##### _With this application, a user can enter a Github username and receive a list of names and descriptions of the last 30 Github repositories the user has created._
+##### *With this application, a user can enter a Github username and receive information about that Github user along with a list of names and descriptions of a selected number of the inputted Github user's repositories.*
 
 ## Technologies Used
 
