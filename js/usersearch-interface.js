@@ -6,6 +6,7 @@ $(document).ready(function() {
     event.preventDefault();
     $("#repo-list").empty();
     $("#error").hide();
+    $("#results").hide();
     username = $("#username").val();
     $("#username").val("");
     $("#username-result").text(username);
