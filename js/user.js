@@ -8,7 +8,6 @@ function User(username, perPage) {
 User.prototype.getRepos = function(){
   var self = this;
   $.get('https://api.github.com/users/' + self.username + '/repos?&per_page=' + self.perPage + '&sort=created&access_token=' + apiKey).then(function(response){
-    console.log(response.length)
     $("#results").show();
     for(var i=0; i<response.length; i++){
       $("#repo-list").append("<li><strong>" + moment(response[i].created_at).format("M/DD/YYYY") + " | " + response[i].name + "</strong>: <em>" + response[i].description + " </em></li>");
@@ -22,7 +21,6 @@ User.prototype.getRepos = function(){
 User.prototype.getUserInformation = function(){
   var self= this;
   $.get('https://api.github.com/users/' + self.username + '?access_token=' + apiKey).then(function(response){
-    console.log(response);
     $("#user-image").attr("src", response.avatar_url);
     if(response.name){
       $("#user-info-name").text(response.name);
