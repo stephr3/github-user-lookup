@@ -1,12 +1,13 @@
 var apiKey = require('./../.env').apiKey;
 
-function User(username) {
+function User(username, perPage) {
   this.username = username;
+  this.perPage = perPage;
 }
 
 User.prototype.getRepos = function(){
   var self = this;
-  $.get('https://api.github.com/users/' + self.username + '/repos?&per_page=100&access_token=' + apiKey).then(function(response){
+  $.get('https://api.github.com/users/' + self.username + '/repos?&per_page=' + self.perPage + '&access_token=' + apiKey).then(function(response){
     console.log(response.length)
     $("#results").show();
     for(var i=0; i<response.length; i++){

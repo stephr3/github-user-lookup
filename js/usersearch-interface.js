@@ -9,8 +9,9 @@ $(document).ready(function() {
     $("#results").hide();
     username = $("#username").val();
     $("#username").val("");
+    perPage = $("#per-page").val();
     $("#username-result").text(username);
-    newUserSearch = new User(username);
+    newUserSearch = new User(username, perPage);
     newUserSearch.getUserInformation();
     newUserSearch.getRepos();
   });
